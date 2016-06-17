@@ -1,0 +1,2363 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePairs (20160617065545)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (16.9ms)[0m  [1mCREATE TABLE "pairs" ("id" serial primary key, "class_number" integer, "pair_set" integer, "first_id" integer, "second_id" integer, "first_full_name" character varying, "second_full_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160617065545"]]
+  [1m[36m (16.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pairs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'students'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:01 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 08:58:51 -0700
+Processing by LandingController#land as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 449ms (Views: 440.7ms | ActiveRecord: 1.1ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:44.862652"], ["updated_at", "2016-06-17 16:03:44.862652"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.4ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.4ms)
+Started GET "/manager/delete?displayedFirstName=Mike&displayedLastName=Guerrero" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by ManagerController#delete as HTML
+  Parameters: {"displayedFirstName"=>"Mike", "displayedLastName"=>"Guerrero"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 AND "students"."last_name" = $2 LIMIT 1  [["first_name", "Mike"], ["last_name", "Guerrero"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 46]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.3ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:44.949315"], ["updated_at", "2016-06-17 16:03:44.949315"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.5ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:44.973270"], ["updated_at", "2016-06-17 16:03:44.973270"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:44 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+Started GET "/manager/add_student?firstName=Someone&lastName=Else&classNumber=2" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Else", "classNumber"=>"2"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Someone"], ["last_name", "Else"], ["class_number", 2], ["created_at", "2016-06-17 16:03:45.005630"], ["updated_at", "2016-06-17 16:03:45.005630"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 LIMIT 1[0m  [["first_name", "Someone"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.033599"], ["updated_at", "2016-06-17 16:03:45.033599"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.047910"], ["updated_at", "2016-06-17 16:03:45.047910"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" IS NULL
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs"[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.118330"], ["updated_at", "2016-06-17 16:03:45.118330"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.130711"], ["updated_at", "2016-06-17 16:03:45.130711"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.140434"], ["updated_at", "2016-06-17 16:03:45.140434"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 16:03:45.150442"], ["updated_at", "2016-06-17 16:03:45.150442"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.187593"], ["updated_at", "2016-06-17 16:03:45.187593"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.198477"], ["updated_at", "2016-06-17 16:03:45.198477"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.207153"], ["updated_at", "2016-06-17 16:03:45.207153"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 16:03:45.216404"], ["updated_at", "2016-06-17 16:03:45.216404"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 16:03:45.238503"], ["updated_at", "2016-06-17 16:03:45.238503"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 09:03:45 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 328ms (Views: 314.5ms | ActiveRecord: 1.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.361596"], ["updated_at", "2016-06-17 21:54:24.361596"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.5ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.6ms)
+Started GET "/manager/delete?displayedFirstName=Mike&displayedLastName=Guerrero" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#delete as HTML
+  Parameters: {"displayedFirstName"=>"Mike", "displayedLastName"=>"Guerrero"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 AND "students"."last_name" = $2 LIMIT 1  [["first_name", "Mike"], ["last_name", "Guerrero"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 21ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.1ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.432340"], ["updated_at", "2016-06-17 21:54:24.432340"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.448168"], ["updated_at", "2016-06-17 21:54:24.448168"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 27ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+Started GET "/manager/add_student?firstName=Someone&lastName=Else&classNumber=2" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Else", "classNumber"=>"2"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Someone"], ["last_name", "Else"], ["class_number", 2], ["created_at", "2016-06-17 21:54:24.489932"], ["updated_at", "2016-06-17 21:54:24.489932"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 LIMIT 1[0m  [["first_name", "Someone"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.507809"], ["updated_at", "2016-06-17 21:54:24.507809"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.519397"], ["updated_at", "2016-06-17 21:54:24.519397"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" IS NULL
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.607041"], ["updated_at", "2016-06-17 21:54:24.607041"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.629586"], ["updated_at", "2016-06-17 21:54:24.629586"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.643870"], ["updated_at", "2016-06-17 21:54:24.643870"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 21:54:24.660285"], ["updated_at", "2016-06-17 21:54:24.660285"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.9ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.709538"], ["updated_at", "2016-06-17 21:54:24.709538"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.724508"], ["updated_at", "2016-06-17 21:54:24.724508"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.734667"], ["updated_at", "2016-06-17 21:54:24.734667"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 21:54:24.745429"], ["updated_at", "2016-06-17 21:54:24.745429"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 21:54:24.769692"], ["updated_at", "2016-06-17 21:54:24.769692"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:54:24 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 211ms (Views: 202.1ms | ActiveRecord: 1.1ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.338034"], ["updated_at", "2016-06-17 21:57:11.338034"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.3ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.5ms)
+Started GET "/manager/delete?displayedFirstName=Mike&displayedLastName=Guerrero" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#delete as HTML
+  Parameters: {"displayedFirstName"=>"Mike", "displayedLastName"=>"Guerrero"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 AND "students"."last_name" = $2 LIMIT 1  [["first_name", "Mike"], ["last_name", "Guerrero"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 76]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.1ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.395980"], ["updated_at", "2016-06-17 21:57:11.395980"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.435140"], ["updated_at", "2016-06-17 21:57:11.435140"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+Started GET "/manager/add_student?firstName=Someone&lastName=Else&classNumber=2" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Else", "classNumber"=>"2"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Someone"], ["last_name", "Else"], ["class_number", 2], ["created_at", "2016-06-17 21:57:11.448257"], ["updated_at", "2016-06-17 21:57:11.448257"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.9ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 LIMIT 1[0m  [["first_name", "Someone"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.467882"], ["updated_at", "2016-06-17 21:57:11.467882"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.478034"], ["updated_at", "2016-06-17 21:57:11.478034"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" IS NULL
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.541083"], ["updated_at", "2016-06-17 21:57:11.541083"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.562993"], ["updated_at", "2016-06-17 21:57:11.562993"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.577487"], ["updated_at", "2016-06-17 21:57:11.577487"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 21:57:11.593834"], ["updated_at", "2016-06-17 21:57:11.593834"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.643673"], ["updated_at", "2016-06-17 21:57:11.643673"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.654870"], ["updated_at", "2016-06-17 21:57:11.654870"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.666054"], ["updated_at", "2016-06-17 21:57:11.666054"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 21:57:11.675843"], ["updated_at", "2016-06-17 21:57:11.675843"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.4ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 21:57:11.706063"], ["updated_at", "2016-06-17 21:57:11.706063"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:57:11 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 235ms (Views: 226.5ms | ActiveRecord: 1.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:21.932009"], ["updated_at", "2016-06-17 22:01:21.932009"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 22ms (ActiveRecord: 3.1ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.5ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.7ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 4.3ms)
+Started GET "/manager/delete?displayedFirstName=Mike&displayedLastName=Guerrero" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by ManagerController#delete as HTML
+  Parameters: {"displayedFirstName"=>"Mike", "displayedLastName"=>"Guerrero"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 AND "students"."last_name" = $2 LIMIT 1  [["first_name", "Mike"], ["last_name", "Guerrero"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 91]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:21 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.4ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.6ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (1.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 3.3ms)
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.049091"], ["updated_at", "2016-06-17 22:01:22.049091"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.4ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.121437"], ["updated_at", "2016-06-17 22:01:22.121437"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+Started GET "/manager/add_student?firstName=Someone&lastName=Else&classNumber=2" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Else", "classNumber"=>"2"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Someone"], ["last_name", "Else"], ["class_number", 2], ["created_at", "2016-06-17 22:01:22.146772"], ["updated_at", "2016-06-17 22:01:22.146772"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 LIMIT 1[0m  [["first_name", "Someone"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (1.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.184657"], ["updated_at", "2016-06-17 22:01:22.184657"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.196117"], ["updated_at", "2016-06-17 22:01:22.196117"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.6ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.8ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+  [1m[35mStudent Load (0.8ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mPair Load (0.6ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (95, 96) AND "pairs"."second_id" IN (95, 96)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 95], ["second_id", 96], ["first_full_name", "Mike Guerrero"], ["second_full_name", "Someone Here"], ["created_at", "2016-06-17 22:01:22.252263"], ["updated_at", "2016-06-17 22:01:22.252263"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+Redirected to http://www.example.com/
+Completed 302 Found in 29ms (ActiveRecord: 5.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.4ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.289944"], ["updated_at", "2016-06-17 22:01:22.289944"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (1.5ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 2.8ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.344102"], ["updated_at", "2016-06-17 22:01:22.344102"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.375079"], ["updated_at", "2016-06-17 22:01:22.375079"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.4ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+Started GET "/manager/add_student?firstName=Hideo&lastName=Kojima&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Hideo", "lastName"=>"Kojima", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Hideo"], ["last_name", "Kojima"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.409936"], ["updated_at", "2016-06-17 22:01:22.409936"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.3ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.8ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.8ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.9ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 99]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 99]]
+  [1m[35mStudent Load (0.8ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 97]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 97]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 98]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 98]]
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 100]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 100]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+  [1m[35mPair Load (0.3ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (95, 99) AND "pairs"."second_id" IN (95, 99)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mPair Load (1.0ms)[0m  [1mSELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (98, 97) AND "pairs"."second_id" IN (98, 97)  ORDER BY "pairs"."id" ASC LIMIT 1[0m
+  [1m[35mPair Load (0.3ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (100, 96) AND "pairs"."second_id" IN (100, 96)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 99]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 99]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 95], ["second_id", 99], ["first_full_name", "Mike Guerrero"], ["second_full_name", "Mr. Anderson"], ["created_at", "2016-06-17 22:01:22.487550"], ["updated_at", "2016-06-17 22:01:22.487550"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 98]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 98]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 97]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 97]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["class_number", 1], ["pair_set", 1], ["first_id", 98], ["second_id", 97], ["first_full_name", "Kevin Bacon"], ["second_full_name", "Something Else"], ["created_at", "2016-06-17 22:01:22.491012"], ["updated_at", "2016-06-17 22:01:22.491012"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 100]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 100]]
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 100], ["second_id", 96], ["first_full_name", "Hideo Kojima"], ["second_full_name", "Someone Here"], ["created_at", "2016-06-17 22:01:22.502906"], ["updated_at", "2016-06-17 22:01:22.502906"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35mStudent Load (0.9ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 99]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 99]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 98]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 98]]
+  [1m[35mStudent Load (0.8ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 97]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 97]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 100]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 100]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 96]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 96]]
+Redirected to http://www.example.com/
+Completed 302 Found in 55ms (ActiveRecord: 11.1ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.540203"], ["updated_at", "2016-06-17 22:01:22.540203"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.556458"], ["updated_at", "2016-06-17 22:01:22.556458"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.568843"], ["updated_at", "2016-06-17 22:01:22.568843"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 22:01:22.578984"], ["updated_at", "2016-06-17 22:01:22.578984"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.610664"], ["updated_at", "2016-06-17 22:01:22.610664"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.620661"], ["updated_at", "2016-06-17 22:01:22.620661"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.630542"], ["updated_at", "2016-06-17 22:01:22.630542"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 22:01:22.641674"], ["updated_at", "2016-06-17 22:01:22.641674"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.9ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 22:01:22.662081"], ["updated_at", "2016-06-17 22:01:22.662081"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:01:22 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 207ms (Views: 197.8ms | ActiveRecord: 1.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.276996"], ["updated_at", "2016-06-17 22:02:02.276996"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.3ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.3ms)
+Started GET "/manager/delete?displayedFirstName=Mike&displayedLastName=Guerrero" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#delete as HTML
+  Parameters: {"displayedFirstName"=>"Mike", "displayedLastName"=>"Guerrero"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 AND "students"."last_name" = $2 LIMIT 1  [["first_name", "Mike"], ["last_name", "Guerrero"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 110]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.1ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.330092"], ["updated_at", "2016-06-17 22:02:02.330092"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.371708"], ["updated_at", "2016-06-17 22:02:02.371708"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+Started GET "/manager/add_student?firstName=Someone&lastName=Else&classNumber=2" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Else", "classNumber"=>"2"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Someone"], ["last_name", "Else"], ["class_number", 2], ["created_at", "2016-06-17 22:02:02.385010"], ["updated_at", "2016-06-17 22:02:02.385010"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."first_name" = $1 LIMIT 1[0m  [["first_name", "Someone"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.403054"], ["updated_at", "2016-06-17 22:02:02.403054"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.413022"], ["updated_at", "2016-06-17 22:02:02.413022"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+  [1m[35mPair Load (0.5ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (114, 115) AND "pairs"."second_id" IN (114, 115)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 114], ["second_id", 115], ["first_full_name", "Mike Guerrero"], ["second_full_name", "Someone Here"], ["created_at", "2016-06-17 22:02:02.441063"], ["updated_at", "2016-06-17 22:02:02.441063"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.463495"], ["updated_at", "2016-06-17 22:02:02.463495"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.3ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.491776"], ["updated_at", "2016-06-17 22:02:02.491776"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.8ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.4ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.5ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.510233"], ["updated_at", "2016-06-17 22:02:02.510233"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+Started GET "/manager/add_student?firstName=Hideo&lastName=Kojima&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Hideo", "lastName"=>"Kojima", "classNumber"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Hideo"], ["last_name", "Kojima"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.531401"], ["updated_at", "2016-06-17 22:02:02.531401"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.4ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.3ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+Started GET "/display/pair" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 117]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 117]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 118]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 118]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 116]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 116]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 119]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 119]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+  [1m[35mPair Load (0.3ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (117, 118) AND "pairs"."second_id" IN (117, 118)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (115, 116) AND "pairs"."second_id" IN (115, 116)  ORDER BY "pairs"."id" ASC LIMIT 1[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (119, 114) AND "pairs"."second_id" IN (119, 114)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 117]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 117]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 118]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 118]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 117], ["second_id", 118], ["first_full_name", "Kevin Bacon"], ["second_full_name", "Mr. Anderson"], ["created_at", "2016-06-17 22:02:02.574354"], ["updated_at", "2016-06-17 22:02:02.574354"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 116]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 116]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["class_number", 1], ["pair_set", 1], ["first_id", 115], ["second_id", 116], ["first_full_name", "Someone Here"], ["second_full_name", "Something Else"], ["created_at", "2016-06-17 22:02:02.577973"], ["updated_at", "2016-06-17 22:02:02.577973"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mStudent Load (0.7ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 119]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 119]]
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 119], ["second_id", 114], ["first_full_name", "Hideo Kojima"], ["second_full_name", "Mike Guerrero"], ["created_at", "2016-06-17 22:02:02.581995"], ["updated_at", "2016-06-17 22:02:02.581995"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 117]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 117]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 118]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 118]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 115]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 115]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 116]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 116]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 119]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 119]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 114]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 114]]
+Redirected to http://www.example.com/
+Completed 302 Found in 24ms (ActiveRecord: 5.1ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.614277"], ["updated_at", "2016-06-17 22:02:02.614277"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.623471"], ["updated_at", "2016-06-17 22:02:02.623471"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.634185"], ["updated_at", "2016-06-17 22:02:02.634185"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 22:02:02.643322"], ["updated_at", "2016-06-17 22:02:02.643322"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Mike&lastName=Guerrero&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mike", "lastName"=>"Guerrero", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mike"], ["last_name", "Guerrero"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.672279"], ["updated_at", "2016-06-17 22:02:02.672279"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Someone&lastName=Here&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Someone", "lastName"=>"Here", "classNumber"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Someone"], ["last_name", "Here"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.681385"], ["updated_at", "2016-06-17 22:02:02.681385"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/manager/add_student?firstName=Something&lastName=Else&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Something", "lastName"=>"Else", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Something"], ["last_name", "Else"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.690344"], ["updated_at", "2016-06-17 22:02:02.690344"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  Rendered landing/land.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/manager/add_student?firstName=Kevin&lastName=Bacon&classNumber=2" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Kevin", "lastName"=>"Bacon", "classNumber"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["first_name", "Kevin"], ["last_name", "Bacon"], ["class_number", 2], ["created_at", "2016-06-17 22:02:02.700734"], ["updated_at", "2016-06-17 22:02:02.700734"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/display/see_class?seeClass=Class+1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.3ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.2ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+Started GET "/manager/add_student?firstName=Mr.&lastName=Anderson&classNumber=1" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by ManagerController#add_student as HTML
+  Parameters: {"firstName"=>"Mr.", "lastName"=>"Anderson", "classNumber"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "class_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Mr."], ["last_name", "Anderson"], ["class_number", 1], ["created_at", "2016-06-17 22:02:02.721196"], ["updated_at", "2016-06-17 22:02:02.721196"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-06-17 15:02:02 -0700
+Processing by LandingController#land as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE (class_number = '1')[0m
+  [1m[35mPair Load (0.2ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
+  Rendered landing/land.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m

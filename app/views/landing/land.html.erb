@@ -1,0 +1,81 @@
+<h1>Pair Students</h1>
+<form action="/manager/add_student" method="get">
+  <input type="text" placeholder="First Name" id="firstName" name="firstName"/>
+  <input type="text" placeholder="Last Name" id="lastName" name="lastName"/>
+  <select id="classNumber" name="classNumber">
+    <% if Student.maximum('class_number').nil? %>
+      <option value="1">1</option>
+    <% else %>
+      <% (Student.maximum('class_number')+1).times do |i| %>
+        <option value="<%=i+1%>"><%=i+1%></option>
+      <% end %>
+    <% end %>
+  </select>
+  <input type="submit" value="Add Student"/>
+</form>
+
+<form action="/display/see_class" method="get">
+  <select id="seeClass" name="seeClass">
+    <% if Student.maximum('class_number').nil? %>
+      <option value="No Classes">No Classes</option>
+    <% else %>
+      <% (Student.maximum('class_number')).times do |i| %>
+        <option value="Class <%=i+1%>"
+          <% if @class_number.to_i == i+1 %>
+            selected
+          <% end %>
+        >Class <%=i+1%></option>
+      <% end %>
+    <% end %>
+  </select>
+  <input type="submit" value="See Class"/>
+  <%= link_to('Pair', {:controller => 'display', :action => 'pair'})%>
+</form>
+
+<p>Students</p>
+<ul>
+  <% if !@class_students.nil? %>
+    <% @class_students.each do |student| %>
+      <li>
+        <%= link_to('Delete', {:controller => 'manager', :action => 'delete', :displayedFirstName => "#{student.first_name}", :displayedLastName => "#{student.last_name}" }) %>
+        <%= "#{student.first_name} " "#{student.last_name}" %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<p>
+  Today's Pairs: Class
+  <% if !@paired_class.nil? %>
+    <%= @paired_class %>
+  <% end %>
+</p>
+<ul>
+  <% if !@pair_results.nil? %>
+    <% print_results = 0 %>
+    <% @pair_results.each do |name| %>
+      <% if print_results%2 == 0 %>
+        <li><%= name %> and
+      <% else %>
+        <%= name %></li>
+      <% end %>
+      <% print_results += 1 %>
+    <% end %>
+  <% end %>
+</ul>
+
+<p>
+  Old Pairs: Class
+  <% if !@paired_class.nil? %>
+    <%= @paired_class %>
+  <% end %>
+</p>
+<ul>
+  <% if !@student_pairs.nil? %>
+    <% @student_pairs.each do |pair| %>
+      <li>
+        <%= link_to('Delete', {:controller => 'manager', :action => 'delete_pair', :displayedFirstId => "#{pair.first_id}", :displayedSecondId => "#{pair.second_id}" }) %>
+        <%= "Class #{@paired_class} " "Set #{pair.pair_set} " "#{pair.first_full_name} and " "#{pair.second_full_name}" %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

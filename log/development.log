@@ -6728,3 +6728,455 @@ Processing by LandingController#land as HTML
   [1m[35mPair Load (0.4ms)[0m  SELECT "pairs".* FROM "pairs" WHERE (class_number = '1')
   Rendered landing/land.html.erb within layouts/application (9.3ms)
 Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LandingController#land as HTML
+  [1m[35m (1.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 492ms (Views: 476.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:27 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (1.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  Rendered landing/land.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/display/see_class?seeClass=Class+1" for ::1 at 2016-06-18 03:10:34 -0700
+Processing by DisplayController#see_class as HTML
+  Parameters: {"seeClass"=>"Class 1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:34 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (1.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 54ms (Views: 43.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=2&displayedSecondId=1" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"2", "displayedSecondId"=>"1"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 2], ["second_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (1.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=3&displayedSecondId=5" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"3", "displayedSecondId"=>"5"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 3], ["second_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 38ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=6&displayedSecondId=4" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"6", "displayedSecondId"=>"4"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 6], ["second_id", 4]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:44 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=1&displayedSecondId=6" for ::1 at 2016-06-18 03:10:45 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"1", "displayedSecondId"=>"6"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 1], ["second_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 4]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (1.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=4&displayedSecondId=5" for ::1 at 2016-06-18 03:10:45 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"4", "displayedSecondId"=>"5"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 4], ["second_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:45 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=4&displayedSecondId=3" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"4", "displayedSecondId"=>"3"}
+  [1m[35mPair Load (1.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 4], ["second_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 7]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=5&displayedSecondId=1" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"5", "displayedSecondId"=>"1"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 5], ["second_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 8]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=6&displayedSecondId=2" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"6", "displayedSecondId"=>"2"}
+  [1m[35mPair Load (1.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 6], ["second_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 9]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:58 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (1.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=3&displayedSecondId=2" for ::1 at 2016-06-18 03:10:59 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"3", "displayedSecondId"=>"2"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 3], ["second_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:59 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 44ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=5&displayedSecondId=6" for ::1 at 2016-06-18 03:10:59 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"5", "displayedSecondId"=>"6"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 5], ["second_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 10]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:10:59 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=3&displayedSecondId=1" for ::1 at 2016-06-18 03:11:00 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"3", "displayedSecondId"=>"1"}
+  [1m[35mPair Load (0.2ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 3], ["second_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 11]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:11:00 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/manager/delete_pair?displayedFirstId=2&displayedSecondId=4" for ::1 at 2016-06-18 03:11:00 -0700
+Processing by ManagerController#delete_pair as HTML
+  Parameters: {"displayedFirstId"=>"2", "displayedSecondId"=>"4"}
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" = $1 AND "pairs"."second_id" = $2 LIMIT 1  [["first_id", 2], ["second_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pairs" WHERE "pairs"."id" = $1  [["id", 12]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:11:00 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/display/pair" for ::1 at 2016-06-18 03:11:03 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mPair Load (1.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (2, 6) AND "pairs"."second_id" IN (2, 6)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (1, 3) AND "pairs"."second_id" IN (1, 3)  ORDER BY "pairs"."id" ASC LIMIT 1[0m
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (4, 5) AND "pairs"."second_id" IN (4, 5)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 2], ["second_id", 6], ["first_full_name", "Federico Gomez"], ["second_full_name", "Jordan Menke"], ["created_at", "2016-06-18 10:11:03.392100"], ["updated_at", "2016-06-18 10:11:03.392100"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["class_number", 1], ["pair_set", 1], ["first_id", 1], ["second_id", 3], ["first_full_name", "Mike Guerrero"], ["second_full_name", "Mina Chuong"], ["created_at", "2016-06-18 10:11:03.407726"], ["updated_at", "2016-06-18 10:11:03.407726"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 4], ["second_id", 5], ["first_full_name", "Fiona Voss"], ["second_full_name", "Michael Martinez"], ["created_at", "2016-06-18 10:11:03.423351"], ["updated_at", "2016-06-18 10:11:03.423351"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:11:03 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/display/pair" for ::1 at 2016-06-18 03:11:03 -0700
+Processing by DisplayController#pair as HTML
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE "students"."class_number" = $1  [["class_number", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT MAX("pairs"."pair_set") FROM "pairs" WHERE "pairs"."class_number" IS NULL[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (4, 1) AND "pairs"."second_id" IN (4, 1)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mPair Load (1.0ms)[0m  [1mSELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (6, 5) AND "pairs"."second_id" IN (6, 5)  ORDER BY "pairs"."id" ASC LIMIT 1[0m
+  [1m[35mPair Load (0.0ms)[0m  SELECT  "pairs".* FROM "pairs" WHERE "pairs"."first_id" IN (2, 3) AND "pairs"."second_id" IN (2, 3)  ORDER BY "pairs"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 4], ["second_id", 1], ["first_full_name", "Fiona Voss"], ["second_full_name", "Mike Guerrero"], ["created_at", "2016-06-18 10:11:03.869625"], ["updated_at", "2016-06-18 10:11:03.869625"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["class_number", 1], ["pair_set", 1], ["first_id", 6], ["second_id", 5], ["first_full_name", "Jordan Menke"], ["second_full_name", "Michael Martinez"], ["created_at", "2016-06-18 10:11:03.870655"], ["updated_at", "2016-06-18 10:11:03.870655"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pairs" ("class_number", "pair_set", "first_id", "second_id", "first_full_name", "second_full_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["class_number", 1], ["pair_set", 1], ["first_id", 2], ["second_id", 3], ["first_full_name", "Federico Gomez"], ["second_full_name", "Mina Chuong"], ["created_at", "2016-06-18 10:11:03.886280"], ["updated_at", "2016-06-18 10:11:03.886280"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-18 03:11:03 -0700
+Processing by LandingController#land as HTML
+  [1m[35m (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT MAX("students"."class_number") FROM "students"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT MAX("students"."class_number") FROM "students"[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT "students".* FROM "students" WHERE (class_number = '1')
+  [1m[36mPair Load (0.0ms)[0m  [1mSELECT "pairs".* FROM "pairs" WHERE (class_number = '1')[0m
+  Rendered landing/land.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 31ms (Views: 31.3ms | ActiveRecord: 0.0ms)

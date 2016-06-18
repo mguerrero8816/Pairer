@@ -9,26 +9,30 @@ class DisplayController < ApplicationController
   end
 
   def pair
-    @student_ids = []
-    @pair_results = []
-    @students_to_pair = Student.where(class_number: cookies[:seeClass])
-    if !@students_to_pair.nil?
-      @students_to_pair.each {|student|
-        @student_ids << student.id
-      }
-    end
-    @pairs_bad = true
-    while @pairs_bad
-      @pairs_bad = false
-      randomized_ids = form_pairs
-    end
+    if enough_pairs
+      @student_ids = []
+      @pair_results = []
+      @students_to_pair = Student.where(class_number: cookies[:seeClass])
+      if !@students_to_pair.nil?
+        @students_to_pair.each {|student|
+          @student_ids << student.id
+        }
+      end
+      @pairs_bad = true
+      while @pairs_bad
+        @pairs_bad = false
+        randomized_ids = form_pairs
+      end
 
-    randomized_ids.each {|count|
-      @pair_results << "#{Student.find(count).first_name} #{Student.find(count).last_name}"
-    }
-    cookies[:pair_results] = @pair_results.to_yaml
-    @paired_class = cookies[:seeClass].to_i
-    cookies[:paired_class] = @paired_class
+      randomized_ids.each {|count|
+        @pair_results << "#{Student.find(count).first_name} #{Student.find(count).last_name}"
+      }
+      cookies[:pair_results] = @pair_results.to_yaml
+      @paired_class = cookies[:seeClass].to_i
+      cookies[:paired_class] = @paired_class
+    else
+      flash[:notice] = 'Not enough pairs. Delete some old ones'
+    end
     redirect_to '/'
   end
 
@@ -73,10 +77,10 @@ class DisplayController < ApplicationController
 
   def enough_pairs
     number_of_slots = 2
-    number_of_students = Student.where(:class_number => @paired_class).count
-    number_of_pairs = Pair.where(:class_number => @paired_class).count
+    number_of_students = Student.where(:class_number => cookies[:seeClass]).count
+    number_of_pairs = Pair.where(:class_number => cookies[:seeClass]).count
     number_of_combinations = calc_factorial(number_of_students) / calc_factorial(number_of_slots) * calc_factorial(number_of_students - number_of_slots)
-    number_of_combinations - number_of_pairs >= number_of_students/number_of_slots 
+    (number_of_combinations - number_of_pairs) >= number_of_students/number_of_slots
   end
 
   def calc_factorial(num)

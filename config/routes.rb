@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'manager/delete_pair'
 
+  get 'manager/delete_pair_sets'
+
   get 'display/pair'
 
   root 'landing#land'

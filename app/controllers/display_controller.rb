@@ -1,18 +1,17 @@
 class DisplayController < ApplicationController
   def see_class
     if params[:seeClass] != 'No Classes'
-      @class_number = params[:seeClass]
-      @class_number.slice!'Class '
+      @class_number = params[:seeClass].slice! 6
       cookies[:seeClass] = @class_number
     end
     redirect_to '/'
   end
 
   def pair
-    if enough_pairs
+    @students_to_pair = Student.where(class_number: cookies[:seeClass])
+    if enough_pairs && !cookies[:seeClass].blank? && (@students_to_pair.count)%2 == 0
       @student_ids = []
       @pair_results = []
-      @students_to_pair = Student.where(class_number: cookies[:seeClass])
       if !@students_to_pair.nil?
         @students_to_pair.each {|student|
           @student_ids << student.id
@@ -31,16 +30,22 @@ class DisplayController < ApplicationController
       @paired_class = cookies[:seeClass].to_i
       cookies[:paired_class] = @paired_class
     else
-      flash[:notice] = 'Not enough pairs. Delete some old ones'
+      if (@students_to_pair.count)%2 == 1
+        flash[:notice] = 'An even number of students are required to pair'
+      elsif !enough_pairs
+        flash[:notice] = 'Not enough pairs available: Delete some old ones'
+      else
+        flash[:notice] = 'No class selected to pair'
+      end
     end
     redirect_to '/'
   end
 
   def form_pairs
-    if Pair.where(:class_number => @paired_class).maximum('pair_set').nil?
+    if Pair.where(:class_number => cookies[:seeClass].to_i).maximum('pair_set').nil?
       set_number = 1
     else
-      set_number = Pair.where(:class_number => @paired_class).maximum('pair_set') + 1
+      set_number = Pair.where(:class_number => cookies[:seeClass].to_i).maximum('pair_set') + 1
     end
     count = 0
     randomized = @student_ids.sample(@student_ids.length)
@@ -65,8 +70,9 @@ class DisplayController < ApplicationController
       end
       count += 2
     end
-    count = 0
+
     if !@pairs_bad
+      count = 0
       while count < alphabetized.length do
         Pair.create(class_number: cookies[:seeClass].to_i, pair_set: set_number, first_id: alphabetized[count], second_id: alphabetized[count+1], first_full_name: "#{Student.find(alphabetized[count]).first_name} #{Student.find(alphabetized[count]).last_name}", second_full_name: "#{Student.find(alphabetized[count+1]).first_name} #{Student.find(alphabetized[count+1]).last_name}")
         count += 2
@@ -79,7 +85,7 @@ class DisplayController < ApplicationController
     number_of_slots = 2
     number_of_students = Student.where(:class_number => cookies[:seeClass]).count
     number_of_pairs = Pair.where(:class_number => cookies[:seeClass]).count
-    number_of_combinations = calc_factorial(number_of_students) / calc_factorial(number_of_slots) * calc_factorial(number_of_students - number_of_slots)
+    number_of_combinations = calc_factorial(number_of_students) / (calc_factorial(number_of_slots) * calc_factorial(number_of_students - number_of_slots))
     (number_of_combinations - number_of_pairs) >= number_of_students/number_of_slots
   end
 

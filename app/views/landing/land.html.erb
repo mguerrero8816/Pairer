@@ -1,38 +1,45 @@
 <h1>Pair Students</h1>
 <form action="/manager/add_student" method="get">
-  <input type="text" placeholder="First Name" id="firstName" name="firstName"/>
-  <input type="text" placeholder="Last Name" id="lastName" name="lastName"/>
+  <input type="text" placeholder="First Name" id="firstName" name="firstName"/><br/>
+  <input type="text" placeholder="Last Name" id="lastName" name="lastName"/><br/>
   <select id="classNumber" name="classNumber">
     <% if Student.maximum('class_number').nil? %>
-      <option value="1">1</option>
+      <option value="1">Class 1</option>
     <% else %>
       <% (Student.maximum('class_number')+1).times do |i| %>
-        <option value="<%=i+1%>"><%=i+1%></option>
+        <option value="<%=i+1%>"
+          >Class <%=i+1%>
+        </option>
       <% end %>
     <% end %>
-  </select>
+  </select><br/>
   <input type="submit" value="Add Student"/>
 </form>
-
+<p>Note: Adding Students will erase all Used Pairs</p>
+<hr>
 <form action="/display/see_class" method="get">
   <select id="seeClass" name="seeClass">
-    <% if Student.maximum('class_number').nil? %>
-      <option value="No Classes">No Classes</option>
+    <% newest_class = Student.maximum('class_number') %>
+    <% if newest_class.nil? %>
+      <option>No Classes</option>
     <% else %>
-      <% (Student.maximum('class_number')).times do |i| %>
-        <option value="Class <%=i+1%>"
+      <% newest_class.times do |i| %>
+        <option
           <% if @class_number.to_i == i+1 %>
             selected
           <% end %>
-        >Class <%=i+1%></option>
+          >Class <%=i+1%>
+        </option>
       <% end %>
     <% end %>
   </select>
   <input type="submit" value="See Class"/>
-  <%= link_to('Pair', {:controller => 'display', :action => 'pair'})%>
 </form>
 
-<p>Students</p>
+<p>
+  Students</br>
+  <%= link_to('Pair', {:controller => 'display', :action => 'pair'})%>
+</p>
 <ul>
   <% if !@class_students.nil? %>
     <% @class_students.each do |student| %>
@@ -44,9 +51,9 @@
   <% end %>
 </ul>
 <p>
-  Today's Pairs: Class
+  Today's Pairs
   <% if !@paired_class.nil? %>
-    <%= @paired_class %>
+    : Class <%= @paired_class %>
   <% end %>
 </p>
 <ul>
@@ -64,11 +71,24 @@
 </ul>
 
 <p>
-  Old Pairs: Class
-  <% if !@paired_class.nil? %>
-    <%= @paired_class %>
+  Used Pairs
+  <% if !@class_number.nil? %>
+    : Class <%= @class_number %></p>
+    <p>
+      <form action="/manager/delete_pair_sets" method="get">
+        <select name="delete_pair">
+          <option>All</option>
+          <% newest_pair = Pair.where(:class_number => cookies[:seeClass]).maximum('pair_set') %>
+          <% if !newest_pair.nil? %>
+            <% newest_pair.times do |num| %>
+              <option>Set <%=num+1%></option>
+            <% end %>
+          <% end %>
+        </select>
+        <input type="submit" value="Delete"/>
+      </form>
+    </p>
   <% end %>
-</p>
 <ul>
   <% if !@student_pairs.nil? %>
     <% @student_pairs.each do |pair| %>

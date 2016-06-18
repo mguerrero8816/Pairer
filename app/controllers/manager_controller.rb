@@ -6,8 +6,11 @@ class ManagerController < ApplicationController
       @new_student.last_name = params[:lastName].strip.capitalize
       @new_student.class_number = params[:classNumber]
       @new_student.save
+      delete_pair_sets
+    else
+      flash[:notice] = 'Full name required'
+      redirect_to '/'
     end
-    redirect_to '/'
   end
 
   def delete
@@ -19,6 +22,20 @@ class ManagerController < ApplicationController
   def delete_pair
     @delete_this = Pair.find_by_first_id_and_second_id(params[:displayedFirstId], params[:displayedSecondId])
     @delete_this.destroy
+    redirect_to '/'
+  end
+
+  def delete_pair_sets
+    if params[:delete_pair].nil?
+      target_pairs = Pair.where(:class_number => params[:classNumber])
+    elsif params[:delete_pair] == "All"
+      target_pairs = Pair.where(:class_number => cookies[:seeClass])
+    else
+      target_pairs = Pair.where(:class_number => cookies[:seeClass], :pair_set => (params[:delete_pair].slice! 4))
+    end
+    target_pairs.each do |item|
+      item.destroy
+    end
     redirect_to '/'
   end
 end

@@ -1,111 +1,112 @@
-<% total_classes = Student.maximum('class_number') %>
-<h1>Pair Students</h1>
-<hr>
+<div class="container">
+  <% total_classes = Student.maximum('class_number') %>
+  <div class="jumbotron">
+    <h1>Pair Students</h1>
+  </div>
 
-<form action="/manager/add_student" method="get">
-  <input type="text" placeholder="First Name" id="firstName" name="firstName"/><br/>
-  <input type="text" placeholder="Last Name" id="lastName" name="lastName"/><br/>
-  <select id="classNumber" name="classNumber">
-    <% if total_classes.nil? %>
-      <option value="1">Class 1</option>
-    <% else %>
-      <% (total_classes+1).times do |i| %>
-        <option value="<%=i+1%>"
-          <% if cookies[:visibleClass].to_i == i+1 %>
-            selected
-          <% end %>
-          >Class <%=i+1%>
-        </option>
-      <% end %>
-    <% end %>
-  </select><br/>
-  <input type="submit" value="Add Student"/>
-</form>
-<p>Note: Adding Students will erase all Used Pairs</p>
-<hr>
-
-<form action="/display/see_class" method="get">
-  <select id="visibleClass" name="visibleClass">
-    <% if total_classes.nil? %>
-      <option>No Classes</option>
-    <% else %>
-      <% total_classes.times do |i| %>
-        <option
-          <% if cookies[:visibleClass].to_i == i+1 %>
-            selected
-          <% end %>
-          >Class <%=i+1%>
-        </option>
-      <% end %>
-    <% end %>
-  </select>
-  <input type="submit" value="See Class"/>
-</form>
-
-<p>
-  Students</br>
-  Note: deleting a student will remove all associated pairs</br>
-</p>
-<ul>
-  <% if !@class_students.nil? %>
-    <% @class_students.each do |student| %>
-      <li>
-        <%= link_to('Delete', {:controller => 'manager', :action => 'delete', :displayedFirstName => "#{student.first_name}", :displayedLastName => "#{student.last_name}" }) %>
-        <%= "#{student.first_name} " "#{student.last_name}" %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
-<hr>
-
-<%= link_to('Pair Students', {:controller => 'display', :action => 'pair'})%>
-<p>
-  Today's Pairs
-  <% if !@current_pairs.nil? %>
-    : Class <%= @current_pairs %>
-  <% end %>
-</p>
-<ul>
-  <% if !@pair_results.nil? %>
-    <% print_results = 0 %>
-    <% @pair_results.each do |name| %>
-      <% if print_results%2 == 0 %>
-        <li><%= name %> and
-      <% else %>
-        <%= name %></li>
-      <% end %>
-      <% print_results += 1 %>
-    <% end %>
-  <% end %>
-</ul>
-<hr>
-
-<p>
-  Used Pairs
-  <% if !cookies[:visibleClass].nil? %>
-    : Class <%= cookies[:visibleClass] %></p>
-    <p>
-      <form action="/manager/delete_pair_sets" method="get">
-        <select name="delete_pair">
-          <option>All</option>
-          <% newest_pair = Pair.where(:class_number => cookies[:visibleClass]).maximum('pair_set') %>
-          <% if !newest_pair.nil? %>
-            <% newest_pair.times do |num| %>
-              <option>Set <%=num+1%></option>
+  <div class="row">
+    <div class="col-sm-4">
+      <form action="/manager/add_student" method="get">
+        <input type="text" placeholder="First Name" id="firstName" name="firstName" class="form-control"/>
+        <input type="text" placeholder="Last Name" id="lastName" name="lastName" class="form-control"/>
+        <select id="classNumber" name="classNumber">
+          <% if total_classes.nil? %>
+            <option value="1">Class 1</option>
+          <% else %>
+            <% (total_classes+1).times do |i| %>
+              <option value="<%=i+1%>"
+                <% if cookies[:visibleClass].to_i == i+1 %>
+                  selected
+                <% end %>
+                >Class <%=i+1%>
+              </option>
             <% end %>
           <% end %>
-        </select>
-        <input type="submit" value="Delete"/>
+        </select><br/>
+        <input type="submit" name="test" value="Add Student" class="btn btn-primary"/>
       </form>
-    </p>
-  <% end %>
-<ul>
-  <% if !@used_pairs.nil? %>
-    <% @used_pairs.each do |pair| %>
-      <li>
-        <%= link_to('Delete', {:controller => 'manager', :action => 'delete_pair', :displayedFirstId => "#{pair.first_id}", :displayedSecondId => "#{pair.second_id}" }) %>
-        <%= "Class #{@current_pairs} " "Set #{pair.pair_set} " "#{pair.first_full_name} and " "#{pair.second_full_name}" %>
-      </li>
+      <p>Note: Adding Students will erase all Used Pairs</p>
+    </div>
+    <div class="col-sm-8"></div>
+  </div>
+  <hr>
+
+  <form action="/display/see_class" method="get">
+    <select id="visibleClass" name="visibleClass">
+      <% if total_classes.nil? %>
+        <option>No Classes</option>
+      <% else %>
+        <% total_classes.times do |i| %>
+          <option
+            <% if cookies[:visibleClass].to_i == i+1 %>
+              selected
+            <% end %>
+            >Class <%=i+1%>
+          </option>
+        <% end %>
+      <% end %>
+    </select></br>
+    <input type="submit" value="See Class" class="btn btn-primary"/>
+  </form>
+
+  <p>Note: deleting a student will remove all associated pairs</p>
+  <% if !@class_students.nil? %>
+    <% @class_students.each do |student| %>
+        <%= link_to('Delete', {:controller => 'manager', :action => 'delete', :displayedFirstName => "#{student.first_name}", :displayedLastName => "#{student.last_name}" }, class: 'btn btn-warning btn-xs') %>
+        <%= "#{student.first_name} " "#{student.last_name}" %>
+      </br>
     <% end %>
   <% end %>
-</ul>
+  <hr>
+
+  <%= link_to('Pair Students', {:controller => 'display', :action => 'pair'}, class: 'btn btn-primary')%>
+  <p>
+    Today's Pairs
+    <% if !@current_pairs.nil? %>
+      : Class <%= @current_pairs %>
+    <% end %>
+  </p>
+  <ul>
+    <% if !@pair_results.nil? %>
+      <% print_results = 0 %>
+      <% @pair_results.each do |name| %>
+        <% if print_results%2 == 0 %>
+          <li><%= name %> and
+        <% else %>
+          <%= name %></li>
+        <% end %>
+        <% print_results += 1 %>
+      <% end %>
+    <% end %>
+  </ul>
+  <hr>
+
+  <p>
+    Used Pairs
+    <% if !cookies[:visibleClass].nil? %>
+      : Class <%= cookies[:visibleClass] %></p>
+      <p>
+        <form action="/manager/delete_pair_sets" method="get">
+          <select name="delete_pair">
+            <option>All</option>
+            <% newest_pair = Pair.where(:class_number => cookies[:visibleClass]).maximum('pair_set') %>
+            <% if !newest_pair.nil? %>
+              <% newest_pair.times do |num| %>
+                <option>Set <%=num+1%></option>
+              <% end %>
+            <% end %>
+          </select></br>
+          <input type="submit" value="Delete" class="btn btn-danger"/>
+        </form>
+      </p>
+    <% end %>
+
+    <% if !@used_pairs.nil? %>
+      <% @used_pairs.each do |pair| %>
+        <%= link_to('Delete', {:controller => 'manager', :action => 'delete_pair', :displayedFirstId => "#{pair.first_id}", :displayedSecondId => "#{pair.second_id}" }, class: 'btn btn-warning btn-xs') %>
+        <%= "Class #{@current_pairs} " "Set #{pair.pair_set} " "#{pair.first_full_name} and " "#{pair.second_full_name}" %>
+      </br>
+      <% end %>
+    <% end %>
+
+</div>

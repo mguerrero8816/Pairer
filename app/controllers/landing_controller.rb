@@ -1,26 +1,26 @@
 class LandingController < ApplicationController
   def land
-    seeClass
-    seeOldPairs
-    seeNewPairs
+    displayClass
+    displayOldPairs
+    displayNewPairs
   end
 
-  def seeClass
-    if !cookies[:seeClass].nil?
-      @class_students = Student.where('class_number = ?', cookies[:seeClass])
+  def displayClass
+    if !cookies[:visibleClass].nil?
+      @class_students = Student.where('class_number = ?', cookies[:visibleClass])
     end
   end
 
-  def seeOldPairs
-    if !cookies[:seeClass].nil?
-      @student_pairs = Pair.where('class_number = ?', cookies[:seeClass])
+  def displayOldPairs
+    if !cookies[:visibleClass].nil?
+      @used_pairs = Pair.where('class_number = ?', cookies[:visibleClass])
     end
   end
 
-  def seeNewPairs
+  def displayNewPairs
     if !cookies[:pair_results].nil?
       @pair_results = YAML.load(cookies[:pair_results])
-      @paired_class = cookies[:paired_class].to_i
+      @current_pairs = cookies[:current_pairs].to_i
     end
   end
 end

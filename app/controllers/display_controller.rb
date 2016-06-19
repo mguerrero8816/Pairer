@@ -1,8 +1,7 @@
 class DisplayController < ApplicationController
   def see_class
     if params[:seeClass] != 'No Classes'
-      @class_number = params[:seeClass].slice! 6
-      cookies[:seeClass] = @class_number
+      cookies[:seeClass] = params[:seeClass].slice! 6
     end
     redirect_to '/'
   end

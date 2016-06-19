@@ -1,12 +1,15 @@
 <h1>Pair Students</h1>
+<hr>
+
 <form action="/manager/add_student" method="get">
   <input type="text" placeholder="First Name" id="firstName" name="firstName"/><br/>
   <input type="text" placeholder="Last Name" id="lastName" name="lastName"/><br/>
   <select id="classNumber" name="classNumber">
-    <% if Student.maximum('class_number').nil? %>
+    <% total_classes = Student.maximum('class_number') %>
+    <% if total_classes.nil? %>
       <option value="1">Class 1</option>
     <% else %>
-      <% (Student.maximum('class_number')+1).times do |i| %>
+      <% (total_classes+1).times do |i| %>
         <option value="<%=i+1%>"
           >Class <%=i+1%>
         </option>
@@ -17,13 +20,13 @@
 </form>
 <p>Note: Adding Students will erase all Used Pairs</p>
 <hr>
+
 <form action="/display/see_class" method="get">
   <select id="seeClass" name="seeClass">
-    <% newest_class = Student.maximum('class_number') %>
-    <% if newest_class.nil? %>
+    <% if total_classes.nil? %>
       <option>No Classes</option>
     <% else %>
-      <% newest_class.times do |i| %>
+      <% total_classes.times do |i| %>
         <option
           <% if @class_number.to_i == i+1 %>
             selected
@@ -38,6 +41,7 @@
 
 <p>
   Students</br>
+  Note: deleting a student will remove all associated pairs</br>
   <%= link_to('Pair', {:controller => 'display', :action => 'pair'})%>
 </p>
 <ul>

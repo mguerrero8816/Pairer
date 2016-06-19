@@ -14,8 +14,17 @@ class ManagerController < ApplicationController
   end
 
   def delete
-    @delete_this = Student.find_by_first_name_and_last_name(params[:displayedFirstName], params[:displayedLastName])
-    @delete_this.destroy
+    student_to_delete = Student.find_by_first_name_and_last_name(params[:displayedFirstName], params[:displayedLastName])
+    first_pairs_to_delete = Pair.where(:first_id => student_to_delete.id)
+    second_pairs_to_delete = Pair.where(:second_id => student_to_delete.id)
+
+    first_pairs_to_delete.each do |num|
+      num.destroy
+    end
+    second_pairs_to_delete.each do |num|
+      num.destroy
+    end
+    student_to_delete.destroy
     redirect_to '/'
   end
 
